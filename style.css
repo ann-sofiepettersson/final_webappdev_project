@@ -1,191 +1,429 @@
-﻿body {
-    background-color: #c76940;
-    font-family: monospace;
-}
-
-@media screen and (max-width: 768px) {
-    #movieBtn,
-    #tvBtn {
-        margin-top: 5px;
+﻿    /*By Ann-Sofie Pettersson*/
+    
+    body {
+        background-color: #c76940;
+        font-family: monospace;
     }
-    #wishList img,
-    .movie img {
-        width: 100px;
-        padding-bottom: 10px;
+    
+    .content {
+        margin-top: 20px;
     }
-    .movie,
-    .tv {
-        list-style-type: none;
-        padding: 5px;
-        white-space: nowrap;
-        overflow-y: hidden;
-        overflow-x: scroll;
+    
+    @media screen and (max-width: 768px) {
+        .navbar-default .navbar-nav li {
+            border-bottom: #fff;
+        }
+        #movieBtn,
+        #tvBtn {
+            margin-top: 5px;
+        }
+        #wishList img,
+        #watched img,
+        .movie img,
+        .tv img,
+        #mPoster img,
+        #tvPoster img {
+            width: 100px;
+        }
+        #wishList img,
+        #watched img,
+        #mPoster img,
+        #tvPoster img {
+            padding-bottom: 5px;
+        }
+        .movie,
+        .tv {
+            list-style-type: none;
+            white-space: nowrap;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        #arrowLeft i,
+        #arrowLeftTv i {
+            display: none;
+        }
+        #arrowRight i,
+        #arrowRightTv i {
+            display: none;
+        }
     }
-}
-
-@media screen and (min-width: 768px) {
-    .movie img,
-    .tv img,
-    .tv-info img,
-    .movie-info img {
-        width: 150px;
+    
+    @media screen and (min-width: 768px) {
+        .movie img,
+        .tv img,
+        #mPoster img,
+        #tvPoster img {
+            width: 150px;
+        }
+        #movieCast div {
+            padding: 10px;
+            display: inline;
+        }
+        .movie,
+        .tv {
+            list-style-type: none;
+            white-space: nowrap;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        /* Vertical scrolling*/
+        #arrowLeft,
+        #arrowLeftTv {
+            color: black;
+            z-index: 1;
+            position: absolute;
+            height: 225px;
+            background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.8));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(left, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.8));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(left, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.8));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+        }
+        #arrowLeft:hover,
+        #arrowLeftTv:hover {
+            color: #524c4c;
+            z-index: 1;
+            position: absolute;
+            height: 225px;
+            background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.8));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(left, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.8));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(left, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.8));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+        }
+        #arrowRight,
+        #arrowRightTv {
+            text-align: right;
+            color: black;
+            z-index: 1;
+            position: absolute;
+            height: 225px;
+            right: 10%;
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+        }
+        #arrowRight:hover,
+        #arrowRightTv:hover {
+            text-align: right;
+            color: #524c4c;
+            z-index: 1;
+            position: absolute;
+            height: 225px;
+            right: 10%;
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+        }
+        #arrowLeft i,
+        #arrowLeftTv i {
+            width: 80px;
+            vertical-align: middle;
+            margin-top: 95px;
+        }
+        #arrowRight i,
+        #arrowRightTv i {
+            width: 80px;
+            vertical-align: middle;
+            margin-top: 95px;
+        }
+        .innerMovie {
+            vertical-align: middle;
+            align-content: center;
+        }
     }
-    .movie,
-    .tv {
-        list-style-type: none;
-        padding: 5px;
-        white-space: nowrap;
-        overflow-y: hidden;
-        overflow-x: scroll;
-    }
-}
-
-
-/*@media screen and (max-width: 768px) {
+    /*@media screen and (max-width: 768px) {
     #wishList img {
         width: 100px;
         padding-bottom: 10px;
     }
 }*/
-
-.container-fluid .navbar-header {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.navbar {
-    border-radius: 0;
-}
-
-.navbar-default {
-    background-color: #c76940;
-    border-color: #c76940;
-    position: fixed;
-    width: 100%;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:active,
-.navbar-default .navbar-toggle:focus {
-    background-color: #f17944;
-}
-
-.navbar-default .navbar-toggle {
-    background-color: #c76940;
-    border-color: #c76940;
-    color: black;
-    border-color: none;
-    padding: 10px 0 5px 0;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: black;
-}
-
-.navbar-toggle {
-    float: none;
-    margin: 8px auto 8px auto;
-}
-
-.nav-tabs li:hover {
-    color: #f17944 !important;
-}
-
-.navbar-default .navbar-nav li a {
-    color: black;
-    padding: 28px 10px 10px 10px;
-    font-size: 16px;
-}
-
-h2 {
-    margin-top: -20px;
-    color: whitesmoke;
-    font-family: monospace;
-    padding: 100px;
-    font-size: 70px;
-}
-
-#banner1 {
-    background-color: grey;
-    background-image: url('images/film-banner3.jpg');
-    background-size: cover;
-    height: 300px;
-    background-attachment: fixed;
-    background-position: 50% 5%;
-}
-
-#banner2 {
-    background-color: grey;
-    background-image: url('images/film-studies-banner.jpg');
-    background-size: cover;
-    height: 300px;
-    background-attachment: fixed;
-}
-
-#banner3 {
-    background-color: grey;
-    background-image: url('images/banner.jpg');
-    background-size: cover;
-    height: 300px;
-    background-attachment: fixed;
-}
-
-
-/*#movieList,
-#tvList {
-   
-}*/
-
-.content {
-    padding: 10px 0 15px 0;
-    margin: auto;
-    /* position: relative;
-    display: inline-block;*/
-    width: 80%;
-}
-
-.movie a,
-.tv a {
-    margin: 5px;
-}
-
-.movie-info,
-.tv-info {
-    width: 80%;
-    padding: 10px 0 15px 0;
-    margin: auto;
-    border-top: 1px solid black;
-    display: none;
-}
-
-.find {
-    margin-top: 10px;
-}
-
-.movie-genre-list li,
-.tv-genre-list li {
-    display: inline-block;
-    list-style-type: none;
-}
-
-.wishlist-item,
-.watched-item {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-#wishList img,
-#watched img {
-    width: 100px;
-}
-
-footer {
-    height: 25px;
-}
-
-footer div {
-    padding: 0 20px 0 20px;
-    display: inline-block;
-    text-align: center;
-}
+    /*Navbar*/
+    
+    .container-fluid .navbar-header {
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .navbar {
+        border-radius: 0;
+    }
+    
+    .navbar-default {
+        background-color: #c76940;
+        border-color: #c76940;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+    
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:active,
+    .navbar-default .navbar-toggle:focus {
+        background-color: #c76940;
+    }
+    
+    .navbar-default .navbar-toggle {
+        background-color: #c76940;
+        border-color: #c76940;
+        color: black;
+        border-color: none;
+        padding: 10px 0 5px 0;
+    }
+    
+    .navbar-default .navbar-collapse {
+        border-color: #c76940 !important;
+        ;
+    }
+    
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: black;
+    }
+    
+    .navbar-toggle {
+        float: none;
+        margin: 8px auto 8px auto;
+    }
+    
+    .navbar-default .navbar-nav li a {
+        color: black;
+        padding: 28px 10px 10px 10px;
+        font-size: 16px;
+        border-bottom: #fff;
+    }
+    
+    h2 {
+        margin-top: -20px;
+        color: whitesmoke;
+        font-family: monospace;
+        padding: 100px;
+        font-size: 70px;
+    }
+    /*Images*/
+    
+    #banner1 {
+        background-color: grey;
+        background-image: url('images/film-banner3.jpg');
+        background-size: cover;
+        height: 300px;
+        background-attachment: fixed;
+        background-position: 50% 5%;
+    }
+    
+    #banner2 {
+        background-color: grey;
+        background-image: url('images/film-studies-banner.jpg');
+        background-size: cover;
+        height: 300px;
+        background-attachment: fixed;
+    }
+    
+    #banner3 {
+        background-color: grey;
+        background-image: url('images/banner.jpg');
+        background-size: cover;
+        height: 300px;
+        background-attachment: fixed;
+    }
+    
+    #title,
+    #name,
+    #listTitle,
+    #watchedTitle {
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+    
+    .movie-content,
+    .tv-content {
+        padding: 10px 0 15px 0;
+        margin: auto;
+        width: 80%;
+    }
+    
+    .innerMovie a {
+        vertical-align: middle;
+    }
+    
+    .movie img+img,
+    .tv img+img {
+        margin-left: 5px;
+    }
+    
+    .find {
+        margin-top: 10px;
+    }
+    
+    .movie-info,
+    .tv-info {
+        width: 80%;
+        padding: 10px 0 15px 0;
+        margin: auto;
+        border-top: 1px solid black;
+        display: none;
+    }
+    
+    #addTo {
+        padding-left: 10px;
+        color: black;
+    }
+    
+    #addTo:hover {
+        color: #524c4c;
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    
+    #addTo .tooltip {
+        visibility: visible;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 68%;
+        left: 62%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    
+    #addTo .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+    
+    #addTo:hover .tooltip {
+        /* visibility: visible;*/
+        opacity: 1;
+    }
+    
+    .movie-genre-list,
+    .tv-genre-list {
+        padding: 0;
+    }
+    
+    .movie-genre-list li,
+    .tv-genre-list li {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0 10px 0 0;
+    }
+    
+    #movieCast p:first-child,
+    #tvCast p:first-child {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    
+    #movieCast p,
+    #tvCast p {
+        text-align: center;
+    }
+    
+    .find span {
+        position: center;
+    }
+    /*Lists*/
+    
+    #wishList h3,
+    #watched h3 {
+        text-align: center;
+    }
+    
+    .wishlist-item,
+    .watched-item {
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    #wishListImg,
+    #watchedImg {
+        text-align: center;
+    }
+    
+    #wishList img,
+    #watched img {
+        width: 100px;
+    }
+    
+    #listOverview,
+    #watchedOverview,
+    #movieOverview,
+    #tvOverview,
+    {
+        height: 115px !important;
+        color: black;
+    }
+    
+    .slimScrollDiv {
+        max-height: 160px !important;
+    }
+    
+    #infoAreaTv .slimScrollDiv,
+    #tvOverview {
+        max-height: 160px !important;
+    }
+    
+    #castAreaMovie .slimScrollDiv,
+    #castAreaTv .slimScrollDiv,
+    #movieCast,
+    #tvCast {
+        max-height: 225px !important;
+    }
+    
+    #myLists {
+        padding-bottom: 20px;
+    }
+    
+    #myLists .slimScrollDiv {
+        height: 115px !important;
+    }
+    
+    footer {
+        height: 25px;
+    }
+    
+    footer div {
+        padding: 0 20px 0 20px;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    footer p {
+        text-align: center;
+    }
+    
+    footer a {
+        color: black;
+        font-weight: bold;
+    }
+    
+    footer a:hover {
+        text-decoration: none;
+        color: #524c4c;
+    }

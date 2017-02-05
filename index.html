@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<!--By Ann-Sofie Pettersson-->
+
+<!DOCTYPE html>
 <html>
 
 <head>
     <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="scripts/jquery-1.9.1.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
     <link href="content/bootstrap.min.css" rel="stylesheet" />
-
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <script src="JS.js"></script>
 </head>
 
 <body>
@@ -33,79 +32,67 @@
             </div>
         </div>
     </nav>
+
     <section id="banner1">
         <h2>Movie Box</h2>
-
     </section>
-
     <section id="movieList">
-        <div class="content">
+        <div class="movie-content">
             <h3>Popular movies</h3>
             <div class="movie">
-                <!-- <a class="left control" href="#moviecarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-                <a class="right control" href="#moviecarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>-->
+
             </div>
             <div class="find form-inline">
-                <input id="searchMovie" class="form-control" type="search" placeholder="Sök film">
-                <button id="movieBtn" class="form-control" type="submit">Sök</button>
+                <input id="searchMovie" class="form-control" type="search" placeholder="Search movie">
+                <button id="movieBtn" class="form-control" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+
             </div>
         </div>
         <div class="movie-info row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div id="mPoster"></div>
             </div>
-            <div class="col-sm-4">
+            <div id="infoAreaMovie" class="col-sm-5">
                 <div id="title"></div>
-                <div id="releaseDate"></div>
-                <div id="overview"></div>
-                <div id="movieGenre"></div>
+                <div id="movieGenre">
+                    <ul></ul>
+                </div>
+                <div id="movieOverview"></div>
+
             </div>
-            <div id="movieCast" class="col-sm-4">
-                <div class="row">
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6"></div>
+            <div id="castAreaMovie" class="col-sm-4">
+                <div id="movieCast">
                 </div>
             </div>
         </div>
-
     </section>
     <section id="banner2"></section>
 
     <section id="tvList">
-        <div class="content">
-            <h3>Popular tv series</h3>
-            <div class="tv"></div>
+        <div class="tv-content">
+            <h3>Popular tv-series</h3>
+            <div class="tv">
+
+            </div>
             <div class="find form-inline">
-                <input id="searchTv" class="form-control" type="search" placeholder="Sök tv-serie">
-                <button id="tvBtn" class="form-control" type="submit">Sök</button>
+                <input id="searchTv" class="form-control" type="search" placeholder="Search tv-series">
+                <button id="tvBtn" class="form-control" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
         </div>
         <div class="tv-info row">
             <div class="col-sm-4">
                 <div id="tvPoster"></div>
             </div>
-            <div class="col-sm-4">
+            <div id="infoAreaTv" class="col-sm-4">
                 <div id="name"></div>
-                <div id="firstAirDate"></div>
+                <div id="tvGenre">
+                    <ul></ul>
+                </div>
                 <div id="tvOverview"></div>
-                <div id="tvGenre"></div>
+
             </div>
-            <div class="col-sm-4">
+            <div id="castAreaTv" class="col-sm-4">
                 <div id="tvCast">
-                    <div id="tvCast" class="col-sm-4">
-                        <div class="row">
-                            <div class="col-sm-6"></div>
-                            <div class="col-sm-6"></div>
-                            <div class="col-sm-6"></div>
-                            <div class="col-sm-6"></div>
-                            <div class="col-sm-6"></div>
-                            <div class="col-sm-6"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -114,17 +101,14 @@
     <section id="myLists">
         <div class="content row">
             <div id="wishList" class="col-sm-6">
-                <h3>Wish list</h3>
+                <h3>Wishlist</h3>
                 <div class="wishlist-item row">
                     <div id="wishListImg" class="col-sm-3"></div>
                     <div id="wishListInfo" class="col-sm-9">
                         <div id="listTitle"></div>
                         <div id="ListReleaseDate"></div>
-                        <div id="genre"></div>
                         <div id="listOverview"></div>
-                        <div id="cast"></div>
                     </div>
-
                 </div>
             </div>
             <div id="watched" class="col-sm-6">
@@ -134,32 +118,32 @@
                     <div id="watchedInfo" class="col-sm-9">
                         <div id="watchedTitle"></div>
                         <div id="watchedReleaseDate"></div>
-                        <div id="watchedgenre"></div>
                         <div id="watchedOverview"></div>
-                        <div id="watchedcast"></div>
                         <div id=""></div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
+
     <footer>
-        <div>
+        <div class="col-sm-4">
             <p>&copy; Ann-Sofie Pettersson 2017</p>
         </div>
-        <div>
-            Data provided by
-            <bold>The Movie DataBase API</bold>
+        <div class="col-sm-4">
+            <p> Data provided by
+                <b>The Movie DataBase API</b>
+            </p>
         </div>
-        <div>
-            <a href=""></a>
-            <a href=""></a>
+        <div class="col-sm-4">
+            <p><a href="https://www.linkedin.com/in/ann-sofie-pettersson-07476039">LinkedIn</a></p>
         </div>
 
     </footer>
-
-
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.slimscroll.min.js"></script>
+    <script src="JS.js"></script>
 </body>
 
 </html>

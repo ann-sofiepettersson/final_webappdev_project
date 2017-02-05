@@ -1,19 +1,25 @@
 # final_webappdev_project
 
-By Ann-Sofie Pettersson 
-Course: Webapplication development
-School: Lernia
+<p>By Ann-Sofie Pettersson</p> 
+<p>Course: Webapplication development</p>
+<p>School: Lernia</p>
 
-I wanted to make a persona "Moviebox" where you can serch for movie and tv-shows, get the informations you need and save them in personal lists, what you want to see, what you have seen etc.  
+  
 
-Technologies I have used:
--HTML
--CSS
--Bootstrap
--jQuery
--JSON
+<h4>Technologies I have used:</h4>
+<ul>
+<li>-HTML</li>
+<li>-CSS</li>
+<li>-Bootstrap</li>
+<li>-jQuery</li>
+<li>-JSON</li>
+</ul>
 
-I have used data from The Movie Database API
+<p>I have used data from The Movie Database API</p>
+<p>After spending a long time searching for an interesting api, I chose The Movie Database, I wanted to make a personal "Moviebox" 
+where you can serch for movie and tv-shows, get the informations you need and save them in personal 
+lists, what you want to see, what you have seen etc.</p>
+<p>I started whith desktop first and then adjusted to mobile. I used jQuery for all functions and DOM manipulations, AJAX calls to get JSON data and CSS and Bootstrap for styling.
+</p>
 
-I started whith desktop first and then adjusted to mobile. I did the project with parallax scrolling. There is a lott of improvements, 
-the content in the list section is showing over the navbar.
+<a href="https://www.linkedin.com/in/ann-sofie-pettersson-07476039">LinkedIn</a>
