@@ -55,10 +55,10 @@
         #tvPoster img {
             width: 150px;
         }
-        #movieCast div {
+        /*#movieCast div {
             padding: 10px;
             display: inline;
-        }
+        }*/
         .movie,
         .tv {
             list-style-type: none;
@@ -141,6 +141,25 @@
             width: 80px;
             vertical-align: middle;
             margin-top: 95px;
+        }
+        .slimScrollDiv {
+            max-height: 160px !important;
+        }
+        #infoAreaTv .slimScrollDiv,
+        #tvOverview {
+            max-height: 160px !important;
+        }
+        #castAreaMovie .slimScrollDiv,
+        #castAreaTv .slimScrollDiv,
+        #movieCast,
+        #tvCast {
+            max-height: 225px !important;
+        }
+        #myLists {
+            padding-bottom: 20px;
+        }
+        #myLists .slimScrollDiv {
+            height: 115px !important;
         }
         /*.innerMovie {
             vertical-align: middle;
@@ -322,7 +341,7 @@
     }
     
     #addTo:hover .tooltip {
-        /* visibility: visible;*/
+        visibility: visible;
         opacity: 1;
     }
     
@@ -380,32 +399,9 @@
     #movieOverview,
     #tvOverview,
     {
-        height: 115px !important;
+        max-height: 115px !important;
         color: black;
-    }
-    
-    .slimScrollDiv {
-        max-height: 160px !important;
-    }
-    
-    #infoAreaTv .slimScrollDiv,
-    #tvOverview {
-        max-height: 160px !important;
-    }
-    
-    #castAreaMovie .slimScrollDiv,
-    #castAreaTv .slimScrollDiv,
-    #movieCast,
-    #tvCast {
-        max-height: 225px !important;
-    }
-    
-    #myLists {
-        padding-bottom: 20px;
-    }
-    
-    #myLists .slimScrollDiv {
-        height: 115px !important;
+        margin-bottom: 5px;
     }
     
     footer {
