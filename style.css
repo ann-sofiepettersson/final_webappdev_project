@@ -10,9 +10,6 @@
     }
     
     @media screen and (max-width: 768px) {
-        .navbar-default .navbar-nav li {
-            border-bottom: #fff;
-        }
         #movieBtn,
         #tvBtn {
             margin-top: 5px;
@@ -31,19 +28,22 @@
         #tvPoster img {
             padding-bottom: 5px;
         }
-        .movie,
-        .tv {
-            list-style-type: none;
-            white-space: nowrap;
-            overflow-y: hidden;
-            overflow-x: hidden;
-        }
         #arrowLeft i,
         #arrowLeftTv i {
             display: none;
         }
         #arrowRight i,
         #arrowRightTv i {
+            display: none;
+        }
+        .movie,
+        .tv {
+            list-style-type: none;
+            white-space: nowrap;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+         ::-webkit-scrollbar {
             display: none;
         }
     }
@@ -65,6 +65,9 @@
             white-space: nowrap;
             overflow-y: hidden;
             overflow-x: hidden;
+        }
+         ::-webkit-scrollbar {
+            display: none;
         }
         /* Vertical scrolling*/
         #arrowLeft,
@@ -139,10 +142,10 @@
             vertical-align: middle;
             margin-top: 95px;
         }
-        .innerMovie {
+        /*.innerMovie {
             vertical-align: middle;
             align-content: center;
-        }
+        }*/
     }
     /*@media screen and (max-width: 768px) {
     #wishList img {
@@ -247,7 +250,8 @@
     }
     
     .movie-content,
-    .tv-content {
+    .tv-content,
+    .list-content {
         padding: 10px 0 15px 0;
         margin: auto;
         width: 80%;
